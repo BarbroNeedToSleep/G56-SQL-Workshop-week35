@@ -14,18 +14,27 @@ Table: CountryLanguage
 Columns: CountryCode, Language, IsOfficial, Percentage
 */
 
+USE world;
+
 -- 1: Get the cities with a name starting with ping sorted by their population with the least populated cities first
+
+SELECT Name AS 'City name', Population FROM City WHERE Name LIKE 'ping%' ORDER BY Population ASC;
 
 
 -- 2: Get the cities with a name starting with ran sorted by their population with the most populated cities first
 
+SELECT Name AS 'City name', Population FROM City WHERE Name LIKE 'ran%' ORDER BY Population DESC;
+
 
 -- 3: Count all cities
 
+SELECT COUNT(*) AS 'Number of Citys' FROM City;
 
 -- 4: Get the average population of all cities
 
+SELECT AVG(Population) FROM City;
 
+-- TODO you where here
 -- 5: Get the biggest population found in any of the cities
 
 
